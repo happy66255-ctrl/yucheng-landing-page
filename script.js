@@ -98,15 +98,30 @@
     return Array.from(form.querySelectorAll(`input[name="${name}"]:checked`)).map((input) => input.value);
   }
 
+  function getField(form, name) {
+    return form.elements.namedItem(name);
+  }
+
+  function getFieldValue(form, name) {
+    const field = getField(form, name);
+    return typeof field?.value === "string" ? field.value.trim() : "";
+  }
+
   function validateForm(form) {
+    const revenueControl = form.querySelector('input[name="revenue"]:checked') || getField(form, "revenue");
     const payload = {
-      name: form.elements.name.value.trim(),
-      phone: form.elements.phone.value.trim(),
-      lineId: form.elements.lineId.value.trim(),
-      company: form.elements.company.value.trim(),
-      revenue: form.querySelector('input[name="revenue"]:checked')?.value || "",
+      name: getFieldValue(form, "name"),
+      phone: getFieldValue(form, "phone"),
+      lineId: getFieldValue(form, "lineId"),
+      email: getFieldValue(form, "email"),
+      company: getFieldValue(form, "company"),
+      companyType: getFieldValue(form, "companyType"),
+      employeeSize: getFieldValue(form, "employeeSize"),
+      revenue: revenueControl?.value || "",
       needs: getCheckedValues(form, "needs"),
-      message: form.elements.message.value.trim(),
+      appointmentDate: getFieldValue(form, "appointmentDate"),
+      appointmentTime: getFieldValue(form, "appointmentTime"),
+      message: getFieldValue(form, "message"),
       source: "yucheng_landing_page",
       submittedAt: new Date().toISOString()
     };
@@ -138,13 +153,19 @@
       valid = false;
     }
 
-    if (!payload.revenue) {
+    if (form.querySelector('[name="revenue"]') && !payload.revenue) {
       setError(form, "revenue", "請選擇公司年營收");
       valid = false;
     }
 
     if (!payload.needs.length) {
       setError(form, "needs", "請至少選擇一個問題");
+      valid = false;
+    }
+
+    const consentField = getField(form, "consent");
+    if (consentField && !consentField.checked) {
+      setError(form, "consent", "請勾選同意聯繫");
       valid = false;
     }
 
@@ -159,43 +180,53 @@
   }
 
   function initForm() {
-    const form = document.querySelector("[data-lead-form]");
-    const status = document.querySelector("[data-form-status]");
-    if (!form) return;
+    const forms = document.querySelectorAll("[data-lead-form]");
+    if (!forms.length) return;
 
-    form.addEventListener("submit", async (event) => {
-      event.preventDefault();
-      status.textContent = "";
-
-      const { valid, payload } = validateForm(form);
-      if (!valid) {
-        status.textContent = "請確認必填欄位後再送出。";
-        track("lead_form_validation_error", {
-          form_name: "yucheng_finance_check"
-        });
-        return;
-      }
-
+    forms.forEach((form) => {
+      const status = form.querySelector("[data-form-status]");
       const submitButton = form.querySelector('button[type="submit"]');
-      submitButton.disabled = true;
-      submitButton.textContent = "送出中...";
-
-      try {
-        await submitLead(payload);
-        track("lead_form_submit", {
-          form_name: "yucheng_finance_check",
-          revenue: payload.revenue,
-          needs: payload.needs.join(",")
-        });
-        status.textContent = "已收到您的預約資料，顧問將盡快與您聯繫。";
-        form.reset();
-      } catch (error) {
-        console.error(error);
-        status.textContent = "目前送出失敗，請稍後再試或改用 LINE 聯繫。";
-      } finally {
-        submitButton.disabled = false;
-        submitButton.textContent = "立即預約一對一財務服務";
+      if (submitButton && !submitButton.dataset.defaultText) {
+        submitButton.dataset.defaultText = submitButton.textContent;
       }
+
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        if (status) status.textContent = "";
+
+        const { valid, payload } = validateForm(form);
+        if (!valid) {
+          if (status) status.textContent = "請確認必填欄位後再送出。";
+          track("lead_form_validation_error", {
+            form_name: "yucheng_finance_check"
+          });
+          return;
+        }
+
+        if (submitButton) {
+          submitButton.disabled = true;
+          submitButton.textContent = "送出中...";
+        }
+
+        try {
+          await submitLead(payload);
+          track("lead_form_submit", {
+            form_name: "yucheng_finance_check",
+            revenue: payload.revenue,
+            needs: payload.needs.join(",")
+          });
+          if (status) status.textContent = "已收到您的預約資料，顧問將盡快與您聯繫。";
+          form.reset();
+        } catch (error) {
+          console.error(error);
+          if (status) status.textContent = "目前送出失敗，請稍後再試或改用 LINE 聯繫。";
+        } finally {
+          if (submitButton) {
+            submitButton.disabled = false;
+            submitButton.textContent = submitButton.dataset.defaultText || "立即預約";
+          }
+        }
+      });
     });
   }
 

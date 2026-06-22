@@ -90,13 +90,14 @@
 
     <header class="site-header" data-header>
       <a class="brand" href="#top" aria-label="回到首頁">
-        <img src="assets/logo-horizontal.png" alt="YU CHENG 昱成資產管理顧問">
+        <img src="assets/logo-white.png" alt="YU CHENG 昱成資產管理顧問">
       </a>
       <nav class="desktop-nav" aria-label="主要導覽">
-        <a href="#services">企業財務規劃</a>
-        <a href="#cases">服務案例</a>
-        <a href="#founder">創辦人介紹</a>
-        <a href="#contact">預約健檢</a>
+        <a href="#top">首頁</a>
+        <a href="#services">服務項目</a>
+        <a href="#why-yucheng">解決方案</a>
+        <a href="#cases">成功案例</a>
+        <a href="#contact">關於我們</a>
       </nav>
       <div class="header-actions">
         <a class="phone-link" href="tel:0226579693" aria-label="撥打電話 02-2657-9693">02-2657-9693</a>
@@ -108,69 +109,123 @@
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-content">
           <h1 id="hero-title">
-            <span class="hero-title-small">為中小企業主打造</span>
-            <span>專屬的公司財務</span>
-            <span class="hero-title-gold">成長藍圖</span>
+            <span class="hero-title-small">專為中小企業主打造的</span>
+            <span class="hero-title-gold">財務規劃夥伴</span>
           </h1>
-          <p class="hero-copy">從企業融資、外聘財務室、稅務節流到政府補助申請，整合跨領域專家，協助企業主把財務問題轉化為可執行的成長路線。</p>
-          <ul class="hero-tags" aria-label="服務項目">
-            <li>企業融資</li>
-            <li>外聘財務室</li>
-            <li>稅務節流</li>
-            <li>家族信託傳承</li>
-            <li>跨境資產配置</li>
-            <li>青年創業貸款</li>
-            <li>政府補助案</li>
-            <li>國發基金</li>
-            <li>SBIR / SIIR</li>
-            <li>大人提小人提</li>
+          <p class="hero-copy">資金調度 × 財務優化 × 成長佈局<br>讓您的企業體質健全、持續成長</p>
+          <ul class="hero-tags" aria-label="服務亮點">
+            <li>財務結構優化</li>
+            <li>取得營運資金</li>
+            <li>掌握政府資源</li>
+            <li>提升企業競爭力</li>
           </ul>
-          <div class="hero-ctas">
-            <a class="button button-primary" href="#contact" data-track="cta_click">立即預約財務健檢</a>
-            <a class="button button-ghost" href="https://line.me/R/ti/p/@605aojmw" target="_blank" rel="noopener" data-track="line_click">加入 LINE 諮詢</a>
+
+          <div class="hero-problem-panel" aria-label="常見困擾">
+            <h2>您是否也遇到以下困擾？</h2>
+            <div class="hero-problem-grid">
+              <article>
+                <svg aria-hidden="true"><use href="#icon-fund"></use></svg>
+                <h3>營運資金不足</h3>
+                <p>訂單增加，卻缺資金周轉不靈</p>
+              </article>
+              <article>
+                <svg aria-hidden="true"><use href="#icon-chart"></use></svg>
+                <h3>財務體質不健全</h3>
+                <p>帳務不清，成本與獲利難以掌握</p>
+              </article>
+              <article>
+                <svg aria-hidden="true"><use href="#icon-contract"></use></svg>
+                <h3>缺乏合適融資管道</h3>
+                <p>申貸條件受限，錯失擴張機會</p>
+              </article>
+              <article>
+                <svg aria-hidden="true"><use href="#icon-grant"></use></svg>
+                <h3>不知道如何申請補助</h3>
+                <p>不熟悉政府資源，缺乏最佳申請時機</p>
+              </article>
+            </div>
+            <p class="hero-problem-note">昱成資產管理顧問，提供專業財務規劃與資源整合服務<br>協助中小企業解決資金與發展難題！</p>
           </div>
-          <dl class="hero-stats">
-            <div><dt>18年+</dt><dd>金融實戰經驗</dd></div>
-            <div><dt>200+</dt><dd>企業主服務經驗</dd></div>
-            <div><dt>跨領域</dt><dd>專業團隊支援</dd></div>
-          </dl>
         </div>
 
-        <div class="hero-slider" aria-label="主打服務輪播">
-          <div class="slide active" data-slide>
-            <img src="assets/case-b.png" alt="企業融資貸款">
-            <div class="slide-copy">
-              <span>企業融資貸款</span>
-              <h2>別讓資金卡住企業成長</h2>
-              <p>青創貸款｜企業貸款｜銀行融資規劃</p>
+        <aside class="hero-form-panel" id="contact" aria-labelledby="hero-form-title">
+          <h2 id="hero-form-title">填表領取免費諮詢</h2>
+          <p>專業顧問將與您聯繫</p>
+          <form class="lead-form lead-form-light" data-lead-form novalidate>
+            <div class="form-row">
+              <label for="hero-name">您的姓名</label>
+              <input id="hero-name" name="name" type="text" autocomplete="name" placeholder="請輸入您的姓名" required>
+              <small class="field-error" data-error-for="name"></small>
             </div>
-          </div>
-          <div class="slide" data-slide>
-            <img src="assets/case-c.png" alt="企業財務分析規劃">
-            <div class="slide-copy">
-              <span>企業財務分析規劃</span>
-              <h2>公司有賺錢，為什麼老闆口袋沒變厚？</h2>
-              <p>外聘財務室｜財報分析｜獲利提升</p>
+            <div class="form-row">
+              <label for="hero-phone">連絡電話</label>
+              <input id="hero-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="0912345678" required>
+              <small class="field-error" data-error-for="phone"></small>
             </div>
-          </div>
-          <div class="slide" data-slide>
-            <img src="assets/case-e.png" alt="政府補助案申請">
-            <div class="slide-copy">
-              <span>政府補助案申請</span>
-              <h2>善用政府資源，加速企業成長</h2>
-              <p>國發基金｜SBIR｜SIIR｜政府補助</p>
+            <div class="form-row">
+              <label for="hero-email">電子郵件</label>
+              <input id="hero-email" name="email" type="email" autocomplete="email" placeholder="your@email.com">
+              <small class="field-error" data-error-for="email"></small>
             </div>
-          </div>
-          <div class="slider-controls" aria-label="輪播控制">
-            <button type="button" class="slider-button" data-slider="prev" aria-label="上一張">‹</button>
-            <div class="slider-dots" aria-label="選擇輪播圖片">
-              <button type="button" class="active" data-dot="0" aria-label="企業融資貸款"></button>
-              <button type="button" data-dot="1" aria-label="企業財務分析規劃"></button>
-              <button type="button" data-dot="2" aria-label="政府補助案申請"></button>
+            <div class="form-row">
+              <label for="hero-company">公司名稱</label>
+              <input id="hero-company" name="company" type="text" autocomplete="organization" placeholder="請輸入公司名稱" required>
+              <small class="field-error" data-error-for="company"></small>
             </div>
-            <button type="button" class="slider-button" data-slider="next" aria-label="下一張">›</button>
-          </div>
-        </div>
+            <div class="form-row">
+              <label for="hero-company-type">公司營業類別</label>
+              <select id="hero-company-type" name="companyType">
+                <option value="">請選擇產業類別</option>
+                <option>製造業</option>
+                <option>餐飲零售</option>
+                <option>科技服務</option>
+                <option>專業服務</option>
+                <option>其他</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <label for="hero-employee-size">員工人數規模</label>
+              <select id="hero-employee-size" name="employeeSize">
+                <option value="">請選擇員工人數規模</option>
+                <option>1-5 人</option>
+                <option>6-20 人</option>
+                <option>21-50 人</option>
+                <option>51 人以上</option>
+              </select>
+            </div>
+            <input type="hidden" name="revenue" value="首屏諮詢表單">
+            <fieldset>
+              <legend>我想了解的服務</legend>
+              <div class="option-grid">
+                <label><input type="checkbox" name="needs" value="財務諮詢">財務諮詢</label>
+                <label><input type="checkbox" name="needs" value="融資貸款">融資貸款</label>
+                <label><input type="checkbox" name="needs" value="政府專案補助">政府專案補助</label>
+              </div>
+              <small class="field-error" data-error-for="needs"></small>
+            </fieldset>
+            <div class="form-duo">
+              <div class="form-row">
+                <label for="hero-date">預約日期</label>
+                <input id="hero-date" name="appointmentDate" type="date">
+              </div>
+              <div class="form-row">
+                <label for="hero-time">預約時段</label>
+                <select id="hero-time" name="appointmentTime">
+                  <option value="">請選擇時段</option>
+                  <option>上午</option>
+                  <option>下午</option>
+                  <option>晚上</option>
+                </select>
+              </div>
+            </div>
+            <label class="form-consent">
+              <input type="checkbox" name="consent" checked>
+              我同意 YUWOW 昱成依隱私權條款聯繫我
+            </label>
+            <button class="button button-primary form-submit" type="submit">立即預約諮詢</button>
+            <p class="form-status" data-form-status role="status" aria-live="polite"></p>
+          </form>
+        </aside>
       </section>
 
       <section class="section top-info-band" aria-label="問題、服務與選擇理由">
@@ -219,7 +274,7 @@
           </div>
         </section>
 
-        <section class="info-column why-section" aria-labelledby="why-title">
+        <section class="info-column why-section" id="why-yucheng" aria-labelledby="why-title">
           <div class="compact-heading">
             <p class="section-number">03</p>
             <div>
@@ -252,6 +307,86 @@
         </section>
       </section>
 
+      <section class="section growth-services" aria-labelledby="growth-services-title">
+        <div class="section-heading centered-heading">
+          <h2 id="growth-services-title">我們如何協助中小企業成長</h2>
+        </div>
+        <div class="growth-card-grid">
+          <article>
+            <img src="assets/hero-analysis.png" alt="財務服務分析">
+            <div>
+              <h3>財務服務</h3>
+              <p>強化財務體質，提升經營效率</p>
+              <ul>
+                <li>財務體檢與成本分析</li>
+                <li>預算規劃與成本控制</li>
+                <li>現金流管理與優化</li>
+                <li>財務制度建置與輔導</li>
+              </ul>
+            </div>
+          </article>
+          <article>
+            <img src="assets/hero-loan.png" alt="融資貸款安排">
+            <div>
+              <h3>融資貸款</h3>
+              <p>媒合資金資源，取得營運動能</p>
+              <ul>
+                <li>銀行貸款申請輔導</li>
+                <li>企業融資方案規劃</li>
+                <li>信用改善與條件優化</li>
+                <li>資金調度整合建議</li>
+              </ul>
+            </div>
+          </article>
+          <article>
+            <img src="assets/hero-grants.png" alt="政府專案送件">
+            <div>
+              <h3>政府專案送件</h3>
+              <p>掌握補助資源，降低經營成本</p>
+              <ul>
+                <li>政府補助計畫諮詢</li>
+                <li>專案計畫書撰寫</li>
+                <li>送件申請與時程掌控</li>
+                <li>後續核銷與追蹤輔導</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section value-section" aria-labelledby="value-title">
+        <div class="section-heading centered-heading">
+          <h2 id="value-title">為什麼選擇昱成資產管理顧問？</h2>
+        </div>
+        <div class="value-grid">
+          <article>
+            <span class="value-icon"><svg><use href="#icon-team"></use></svg></span>
+            <h3>專業顧問團隊</h3>
+            <p>財務、會計、稅務與融資團隊，提供一站式解決方案</p>
+          </article>
+          <article>
+            <span class="value-icon"><svg><use href="#icon-plan"></use></svg></span>
+            <h3>客製化策略</h3>
+            <p>依企業需求量身打造，規劃最適合的財務策略</p>
+          </article>
+          <article>
+            <span class="value-icon"><svg><use href="#icon-target"></use></svg></span>
+            <h3>豐富實戰經驗</h3>
+            <p>協助眾多中小企業，成功取得資金與補助</p>
+          </article>
+          <article>
+            <span class="value-icon"><svg><use href="#icon-integrate"></use></svg></span>
+            <h3>專業整合資源</h3>
+            <p>整合銀行與政府資源，提升申請成功率</p>
+          </article>
+          <article>
+            <span class="value-icon"><svg><use href="#icon-consult"></use></svg></span>
+            <h3>長期合作夥伴</h3>
+            <p>不只是短期專案，更是陪伴企業成長的夥伴</p>
+          </article>
+        </div>
+      </section>
+
       <section class="section" id="cases" aria-labelledby="cases-title">
         <div class="section-heading inline-heading">
           <div>
@@ -266,26 +401,26 @@
             <div>
               <span>案例 A</span>
               <h3>餐飲企業</h3>
-              <p>營所稅節省</p>
+              <p>資金整合貸款</p>
               <strong>120萬 / 年</strong>
             </div>
           </article>
           <article class="case-card">
-            <img src="assets/case-b.png" alt="科技公司案例">
+            <img src="assets/case-b-new.png" alt="科技公司案例">
             <div>
               <span>案例 B</span>
               <h3>科技公司</h3>
-              <p>成功取得</p>
-              <strong>3000萬企業融資</strong>
+              <p>成長貸款</p>
+              <strong>3000萬元成功融資</strong>
             </div>
           </article>
           <article class="case-card">
-            <img src="assets/case-c.png" alt="高資產家庭案例">
+            <img src="assets/case-c-new.png" alt="貿易產業案例">
             <div>
               <span>案例 C</span>
-              <h3>高資產家庭</h3>
-              <p>完成資產傳承架構</p>
-              <strong>避免未來爭產風險</strong>
+              <h3>貿易產業</h3>
+              <p>產業專案貸款</p>
+              <strong>降低 35% 財務成本</strong>
             </div>
           </article>
           <article class="case-card">
@@ -301,9 +436,9 @@
             <img src="assets/case-e.png" alt="AI 新創公司案例">
             <div>
               <span>案例 E</span>
-              <h3>AI 新創公司</h3>
-              <p>國發基金成功取得2000萬政府投資</p>
-              <strong>SBIR 成功取得300萬政府補助</strong>
+              <h3>AI 科技公司</h3>
+              <p>政府補助與 SBIR 研發補助</p>
+              <strong>補助金額達 500 萬元</strong>
             </div>
           </article>
         </div>
@@ -316,136 +451,120 @@
           <p>五步驟打造財務成長藍圖</p>
         </div>
         <ol class="process-list">
-          <li><svg><use href="#icon-clipboard"></use></svg><span>STEP 1</span>填寫需求表單</li>
-          <li><svg><use href="#icon-talk"></use></svg><span>STEP 2</span>顧問一對一訪談</li>
-          <li><svg><use href="#icon-diagnose"></use></svg><span>STEP 3</span>客製財務診斷</li>
-          <li><svg><use href="#icon-contract"></use></svg><span>STEP 4</span>簽財務顧問合約</li>
-          <li><svg><use href="#icon-service"></use></svg><span>STEP 5</span>專案執行與追蹤</li>
+          <li><svg><use href="#icon-clipboard"></use></svg><span>STEP 1</span>初步諮詢與需求了解</li>
+          <li><svg><use href="#icon-talk"></use></svg><span>STEP 2</span>現況分析與問題評估</li>
+          <li><svg><use href="#icon-diagnose"></use></svg><span>STEP 3</span>制定解決方案與規劃</li>
+          <li><svg><use href="#icon-contract"></use></svg><span>STEP 4</span>執行與協調落地</li>
+          <li><svg><use href="#icon-service"></use></svg><span>STEP 5</span>追蹤與持續優化</li>
         </ol>
       </section>
 
       <section class="section founder-contact-grid">
         <article class="founder-card" id="founder" aria-labelledby="founder-title">
           <div class="founder-image">
-            <img src="assets/alex-wu.jpg" alt="Alex Wu 吳冠緯">
+            <img src="assets/founder-team.webp" alt="昱成顧問與合作團隊">
           </div>
           <div>
             <p class="section-number">06</p>
             <h2 id="founder-title">創辦人介紹</h2>
-            <h3>Alex Wu 吳冠緯</h3>
-            <p><strong>專業背景：</strong>主要擅長財富管理顧問，同時本身是創業家與實業家。顧問團隊整合會計師、資產規劃師、資深保險顧問、稅務律師、企業融資專家、國際移民資源，從法律、稅務到財管，提供一站式、全方位的財務整合服務。</p>
-            <p><strong>成就經歷：</strong>於全台 30 萬金融保險從業人員中入圍前50名、MDRT百萬圓桌會會員，並達其中最高級別 TOT頂尖會員及亞太區達到最高銷售級別白金獎。</p>
-            <p><strong>資深領導：</strong>曾擔任國泰人壽區經理及公勝保險經紀人資深行銷協理。</p>
+            <h3>Alex Wu 吳昱緯</h3>
+            <div class="founder-columns">
+              <div>
+                <strong>專業背景</strong>
+                <ul>
+                  <li>國立臺灣大學財務金融碩士</li>
+                  <li>曾任國際會計師事務所財務顧問</li>
+                  <li>專精企業財務分析、資金規劃與稅務策略</li>
+                  <li>累積輔導超過 300 家中小企業</li>
+                </ul>
+              </div>
+              <div>
+                <strong>專業資格</strong>
+                <ul>
+                  <li>中華民國會計師（CPA）</li>
+                  <li>中華民國財務分析師（CFA）</li>
+                  <li>國際財務規劃師（CFP）</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </article>
 
         <article class="gift-card" aria-labelledby="gift-title">
           <p class="section-number">07</p>
-          <h2 id="gift-title">免費財務健檢</h2>
-          <p class="limit">限額開放</p>
-          <h3>免費獲得企業財務診斷報告</h3>
+          <h2 id="gift-title">免費財務體檢報告</h2>
+          <p class="limit">限量預約</p>
+          <img class="gift-visual" src="assets/free-checkup-devices.png" alt="免費財務體檢報告">
+          <h3>協助您快速掌握企業財務現況</h3>
           <ul>
-            <li>財務體檢</li>
-            <li>稅務分析</li>
+            <li>財務體質評估</li>
             <li>現金流分析</li>
-            <li>融資能力評估</li>
-            <li>補助資源評估建議</li>
+            <li>稅務節稅建議</li>
+            <li>資金規劃建議</li>
+            <li>成長策略初步分析</li>
           </ul>
           <div class="gift-value">
-            <span>價值</span>
-            <strong>NT$20,000</strong>
-            <em>本月限額 30 名</em>
+            <span>限量</span>
+            <strong>30名</strong>
+            <em>價值 NT$20,000</em>
           </div>
         </article>
+      </section>
 
-        <section class="contact-panel" id="contact" aria-labelledby="contact-title">
-          <p class="section-number">08</p>
-          <h2 id="contact-title">預約一對一財務服務</h2>
-          <form class="lead-form" data-lead-form novalidate>
-            <div class="form-row">
-              <label for="name">姓名</label>
-              <input id="name" name="name" type="text" autocomplete="name" placeholder="請輸入您的姓名" required>
-              <small class="field-error" data-error-for="name"></small>
-            </div>
-            <div class="form-row">
-              <label for="phone">電話</label>
-              <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="請輸入您的電話" required>
-              <small class="field-error" data-error-for="phone"></small>
-            </div>
-            <div class="form-row">
-              <label for="lineId">LINE ID</label>
-              <input id="lineId" name="lineId" type="text" placeholder="請輸入您的 LINE ID">
-              <small class="field-error" data-error-for="lineId"></small>
-            </div>
-            <div class="form-row">
-              <label for="company">公司名稱</label>
-              <input id="company" name="company" type="text" autocomplete="organization" placeholder="請輸入公司名稱" required>
-              <small class="field-error" data-error-for="company"></small>
-            </div>
-            <fieldset>
-              <legend>公司年營收</legend>
-              <div class="option-grid">
-                <label><input type="radio" name="revenue" value="500萬以下" required>500萬以下</label>
-                <label><input type="radio" name="revenue" value="500-3000萬">500-3000萬</label>
-                <label><input type="radio" name="revenue" value="3000萬-1億">3000萬-1億</label>
-                <label><input type="radio" name="revenue" value="1億以上">1億以上</label>
-              </div>
-              <small class="field-error" data-error-for="revenue"></small>
-            </fieldset>
-            <fieldset>
-              <legend>目前最想解決的問題</legend>
-              <div class="option-grid">
-                <label><input type="checkbox" name="needs" value="融資貸款">融資貸款</label>
-                <label><input type="checkbox" name="needs" value="財務分析規劃">財務分析規劃</label>
-                <label><input type="checkbox" name="needs" value="政府補助申請">政府補助申請</label>
-                <label><input type="checkbox" name="needs" value="稅務節流">稅務節流</label>
-                <label><input type="checkbox" name="needs" value="資產配置">資產配置</label>
-                <label><input type="checkbox" name="needs" value="其他">其他</label>
-              </div>
-              <small class="field-error" data-error-for="needs"></small>
-            </fieldset>
-            <div class="form-row">
-              <label for="message">其他說明</label>
-              <textarea id="message" name="message" rows="4" placeholder="請簡單描述您的需求"></textarea>
-              <small class="field-error" data-error-for="message"></small>
-            </div>
-            <button class="button button-primary form-submit" type="submit">立即預約一對一財務服務</button>
-            <p class="form-status" data-form-status role="status" aria-live="polite"></p>
-          </form>
-        </section>
+      <section class="section partner-section" aria-labelledby="partner-title">
+        <div class="section-heading inline-heading">
+          <div>
+            <p class="section-number">08</p>
+            <h2 id="partner-title">銀行與財務會計資源合作夥伴</h2>
+          </div>
+          <p>32+ 銀行融資資源 × 財務顧問團隊 × 會計稅務專家</p>
+        </div>
+        <div class="partner-logo-grid" aria-label="合作夥伴 logo">
+          <img src="assets/partners/partner-1.png" alt="合作夥伴">
+          <img src="assets/partners/partner-2.png" alt="合作夥伴">
+          <img src="assets/partners/partner-3.jpg" alt="合作夥伴">
+          <img src="assets/partners/partner-4.jpg" alt="合作夥伴">
+          <img src="assets/partners/partner-5.png" alt="合作夥伴">
+          <img src="assets/partners/partner-6.jpg" alt="合作夥伴">
+          <img src="assets/partners/partner-7.png" alt="合作夥伴">
+          <img src="assets/partners/partner-8.png" alt="合作夥伴">
+          <img src="assets/partners/partner-9.png" alt="合作夥伴">
+          <img src="assets/partners/partner-10.png" alt="合作夥伴">
+          <img src="assets/partners/partner-11.png" alt="合作夥伴">
+          <img src="assets/partners/partner-12.png" alt="合作夥伴">
+          <img src="assets/partners/partner-13.png" alt="合作夥伴">
+          <img src="assets/partners/partner-14.png" alt="合作夥伴">
+          <img src="assets/partners/partner-15.png" alt="合作夥伴">
+          <img src="assets/partners/partner-16.png" alt="合作夥伴">
+          <img src="assets/partners/partner-17.png" alt="合作夥伴">
+          <img src="assets/partners/partner-18.png" alt="合作夥伴">
+        </div>
       </section>
 
       <section class="trust-band" aria-labelledby="trust-title">
-        <div>
-          <p class="section-number">09</p>
-          <h2 id="trust-title">值得信賴的專業團隊</h2>
+        <div class="trust-copy">
+          <h2 id="trust-title">我們的專業・客戶的肯定</h2>
+          <p class="trust-quote">透過專業的財務規劃與資源協助，讓我們順利取得關鍵資金，公司營運效率大幅提升，真的非常感謝！</p>
+          <p class="trust-author">— 企業主　陳先生</p>
         </div>
         <dl class="trust-stats">
-          <div><svg><use href="#icon-team"></use></svg><dt>200+</dt><dd>企業主服務經驗</dd></div>
-          <div><svg><use href="#icon-globe"></use></svg><dt>18年+</dt><dd>金融實戰經驗</dd></div>
-          <div><svg><use href="#icon-integrate"></use></svg><dt>跨領域</dt><dd>專業團隊支援</dd></div>
-          <div><svg><use href="#icon-target"></use></svg><dt>客製化</dt><dd>量身打造方案</dd></div>
+          <div><dt>15+</dt><dd>年專業經驗</dd></div>
+          <div><dt>300+</dt><dd>顧問企業客戶</dd></div>
+          <div><dt>2億+</dt><dd>協助取得資金</dd></div>
+          <div><dt>95%</dt><dd>客戶滿意度</dd></div>
         </dl>
-        <div class="partner-logos" aria-label="合作夥伴">
-          <span>國泰金控</span>
-          <span>中國信託銀行</span>
-          <span>台新銀行</span>
-          <span>華南銀行</span>
-          <span>台灣中小企銀</span>
-          <span>富邦銀行</span>
-          <span>玉山銀行</span>
-          <span>陽信銀行</span>
-          <span>KPMG</span>
-          <span>PwC</span>
-          <span>Deloitte</span>
-        </div>
       </section>
     </main>
 
     <footer class="site-footer">
       <img src="assets/logo-horizontal.png" alt="YU CHENG 昱成資產管理顧問">
-      <p>專業｜誠信｜整合｜創新</p>
-      <p>© 2024 昱成資產管理顧問股份有限公司 版權所有</p>
+      <p class="footer-slogan">專業｜誠信｜整合｜創新</p>
+      <address class="footer-contact">
+        <a href="tel:0226579693">02-2657-9693</a>
+        <a href="mailto:wealth@yuchengpro.com">wealth@yuchengpro.com</a>
+        <span>臺北市內湖區文湖街 82 號 2 樓</span>
+      </address>
+      <p class="footer-copy">© 2024 昱成資產管理顧問股份有限公司 版權所有</p>
     </footer>
 
     <div class="mobile-sticky" aria-label="手機快捷操作">
