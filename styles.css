@@ -2040,6 +2040,27 @@ dd {
   box-shadow: none;
 }
 
+.form-line-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  border: 1px solid rgba(7, 107, 69, 0.2);
+  border-radius: 999px;
+  background: rgba(6, 178, 99, 0.08);
+  color: #086b45;
+  font-size: 13px;
+  font-weight: 900;
+  text-decoration: none;
+  transition: background 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+.form-line-link:hover {
+  background: #06b263;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
 .hero-slider {
   display: none;
 }
